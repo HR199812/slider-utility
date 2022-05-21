@@ -1,4 +1,3 @@
-import styles from "../styles/Home.module.css";
 import { useDrag } from "@use-gesture/react";
 import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useRef, useState } from "react";
@@ -25,7 +24,7 @@ const HorizontalSlider = () => {
 
   return (
     <>
-      <div className="parent-container">
+      <div>
         <animated.div
           {...bind()}
           style={{
