@@ -34,8 +34,8 @@
 
 .AppHandle {
   float: right;
-  width: 100px;
-  height: 10px;
+  /* width: 100px;
+  height: 10px; */
   background-image: url(https://exhibitacollection.com/img/STORE/slide-button.png);
   margin: 0 auto;
   border-radius: 25px;
@@ -53,5 +53,11 @@
     top: 0;
     left: 50%;
     z-index: 4;
+  }
+  .AppHandle {
+    transform: rotate(90deg);
+    width: 30px;
+    height: 25px;
+    background-size: 30px;
   }
 }
