@@ -7,7 +7,7 @@ const HorizontalSlider = () => {
 
   const elementSize = useRef();
 
-  let [{ x, y }, api] = useSpring(() => ({ x: 720, y: 0 }));
+  let [{ x, y }, api] = useSpring(() => ({ x: -120, y: 0 }));
 
   const bind = useDrag(
     ({ down, offset: [x, y] }) => api.start({ x, y, immediate: down }),
