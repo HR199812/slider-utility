@@ -68,7 +68,7 @@ a {
   cursor: ew-resize;
 }
 .item-child-container {
-  transform: rotate(90deg) translate(25px);
+  /* transform: rotate(90deg) translate(25px); */
   display: flex;
 }
 .item-child-container .item-subchild {
@@ -76,8 +76,8 @@ a {
   /* width: 100%; */
 }
 .swiper {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .swiper-slide {

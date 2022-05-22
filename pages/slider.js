@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+// import required modules
 import { Pagination, A11y, Autoplay, Mousewheel, Parallax } from "swiper";
 
 // Import Swiper styles
@@ -15,13 +16,11 @@ export default function slider() {
   return (
     <>
       <Swiper
-        // install Swiper modules
         modules={[Pagination, A11y, Autoplay, Mousewheel, Parallax]}
         spaceBetween={0}
         slidesPerView={1}
         autoplay={{ delay: 3000 }}
         mousewheel={{ invert: true }}
-        direction={"vertical"}
         pagination={{
           clickable: true,
           dynamicBullets: true,
@@ -38,54 +37,30 @@ export default function slider() {
         <SwiperSlide>
           <div className="item-child-container">
             <div className="item-subchild">
-              <img
-                data-swiper-parallax={-200}
-                src="https://d2rdb56lmj4es2.cloudfront.net/data/photo/2019/3/28/0328192-2590-FCBD-5A018FCFA66A0706.jpg"
-                alt="sunrise"
-              />
+              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
             </div>
             <div className="item-subchild">
-              <img
-                data-swiper-parallax={-200}
-                src="https://d2rdb56lmj4es2.cloudfront.net/data/photo/2019/2/18/0218196-2590-FCBD-5AA19539BBCE5DDF.jpg"
-                alt="sunrise"
-              />
+              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jp" />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="item-child-container">
             <div className="item-subchild">
-              <img
-                data-swiper-parallax={-200}
-                src="https://d2rdb56lmj4es2.cloudfront.net/data/photo/2019/3/28/0328192-2590-FCBD-5A018FCFA66A0706.jpg"
-                alt="sunrise"
-              />
+              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jp" />
             </div>
             <div className="item-subchild">
-              <img
-                data-swiper-parallax={-200}
-                src="https://d2rdb56lmj4es2.cloudfront.net/data/photo/2019/2/18/0218196-2590-FCBD-5AA19539BBCE5DDF.jpg"
-                alt="sunrise"
-              />
+              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="item-child-container">
             <div className="item-subchild">
-              <img
-                data-swiper-parallax={-200}
-                src="https://d2rdb56lmj4es2.cloudfront.net/data/photo/2019/3/28/0328192-2590-FCBD-5A018FCFA66A0706.jpg"
-                alt="sunrise"
-              />
+              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
             </div>
             <div className="item-subchild">
-              <img
-                data-swiper-parallax={-200}
-                src="https://d2rdb56lmj4es2.cloudfront.net/data/photo/2019/2/18/0218196-2590-FCBD-5AA19539BBCE5DDF.jpg"
-                alt="sunrise"
-              />
+              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jp" />
             </div>
           </div>
         </SwiperSlide>
