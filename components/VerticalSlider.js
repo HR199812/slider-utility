@@ -24,31 +24,34 @@ const VerticalSlider = () => {
   return (
     <>
       <div>
-        <animated.div
-          {...bind()}
-          style={{
-            x,
-            y,
-            touchAction: "pan-x",
-          }}
-          className="container-one"
-        >
-          <img
-            className="image"
-            src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jpg"
-          ></img>
-          <div className="app-handle-container">
-            <div className="app-handle" />
-          </div>
-        </animated.div>
-        <div className="container-two">
+        <div className="container-one" ref={elementSize}>
+          <animated.div
+            {...bind()}
+            style={{
+              x,
+              y,
+              touchAction: "pan-x",
+            }}
+            className="container-two"
+          >
+            <img
+              className="image"
+              src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jpg"
+            ></img>
+            <div className="app-handle-container">
+              <div className="app-handle" />
+            </div>
+          </animated.div>
+        </div>
+
+        {/* <div className="container-two">
           <div ref={elementSize} className="container-two-image">
             <img
               className="image"
               src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg"
             ></img>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

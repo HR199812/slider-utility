@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, A11y, Autoplay, Mousewheel, Parallax } from "swiper";
@@ -11,7 +11,7 @@ import "swiper/css/autoplay";
 import "swiper/css/mousewheel";
 import "swiper/css/parallax";
 
-const Slider = () => {
+export default function slider() {
   return (
     <>
       <Swiper
@@ -21,6 +21,7 @@ const Slider = () => {
         slidesPerView={1}
         autoplay={{ delay: 3000 }}
         mousewheel={{ invert: true }}
+        direction={"vertical"}
         pagination={{
           clickable: true,
           dynamicBullets: true,
@@ -91,5 +92,4 @@ const Slider = () => {
       </Swiper>
     </>
   );
-};
-export default Slider;
+}
