@@ -64,15 +64,15 @@ a {
   width: 50vw !important;
   height: 90vh;
 }
-.item{
+.item {
   /* width: 65%; */
   /* width: 100vw; */
 }
-.item-child-container{
+.item-child-container {
   transform: rotate(90deg) translate(25px);
   display: flex;
 }
-.item-child-container .item-subchild{
+.item-child-container .item-subchild {
   float: left;
   /* width: 100%; */
 }
@@ -99,6 +99,33 @@ a {
   vertical-align: middle;
   border: none;
   transition: all 0.3s linear;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  transform: rotate(-90deg);
+  text-align: center;
+  font-size: 48px;
+  font-weight: 500;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .app-handle-container {

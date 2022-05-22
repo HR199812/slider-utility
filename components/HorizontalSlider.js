@@ -7,19 +7,17 @@ const HorizontalSlider = () => {
 
   const elementSize = useRef();
 
-  let [{ x, y }, api] = useSpring(() => ({ x:0, y: 0 }));
+  let [{ x, y }, api] = useSpring(() => ({ x: -20, y: 0 }));
 
   const bind = useDrag(
     ({ down, offset: [x, y] }) => api.start({ x, y, immediate: down }),
     {
-      bounds: { right: 0, bottom: 0, top: 0, left:left},
+      bounds: { right: 0, top: 0, bottom: 0, left: left },
     }
   );
 
   useEffect(() => {
-    setLeft(
-      elementSize.current.getBoundingClientRect().left - window.innerWidth
-    );
+    setLeft(elementSize.current.getBoundingClientRect().right - 500);
   }, [left]);
 
   return (

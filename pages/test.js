@@ -1,46 +1,55 @@
 import React from "react";
-// import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-/*
-  resources:
-  1- https://www.npmjs.com/package/react-owl-carousel
-  2- https://github.com/seal789ie/react-owl-carousel
-*/
-import dynamic from "next/dynamic";
+// Import Swiper React components
+import { Pagination, A11y, Autoplay, Mousewheel, Parallax } from "swiper";
 
-const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-  ssr: false,
-});
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
+import "swiper/css/mousewheel";
+import "swiper/css/parallax";
 
 const MyOwlCarousel = () => {
-  const options = {
-    loop: true,
-    margin:0,
-    items: 1,
-    autoplay: true
-  };
   return (
-    <OwlCarousel className="owl-theme" {...options}>
-      <div className="item">
+    <Swiper
+      // install Swiper modules
+      modules={[Pagination, A11y, Autoplay, Mousewheel, Parallax]}
+      spaceBetween={-10}
+      slidesPerView={1}
+      autoplay={{ delay: 3000 }}
+      mousewheel={{ invert: true }}
+      pagination={{
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      }}
+      parallax={true}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log("slide change")}
+      style={{ transform: `rotate(-90deg)` }}
+      preloadImages={false}
+      loop={true}
+      watchSlidesProgress={true}
+      speed={2000}
+    >
+      <SwiperSlide>
         <img
-          src="https://d2rdb56lmj4es2.cloudfront.net/data/photo/2019/3/28/0328194-2590-FCBD-5A4FCA54E307E0AB.jpg"
-          alt="road"
+          src="https://d2rdb56lmj4es2.cloudfront.net/data/photo/2019/3/28/0328192-2590-FCBD-5A018FCFA66A0706.jpg"
+          alt="sunrise"
         />
-      </div>
-      <div className="item">
+      </SwiperSlide>
+      <SwiperSlide>
         <img
           src="https://d2rdb56lmj4es2.cloudfront.net/data/photo/2019/2/18/0218196-2590-FCBD-5AA19539BBCE5DDF.jpg"
           alt="sunrise"
         />
-      </div>
-      <div className="item">
-        <img
-          src="https://d2rdb56lmj4es2.cloudfront.net/data/photo/2019/3/28/0328192-2590-FCBD-5A018FCFA66A0706.jpg"
-          alt="road2"
-        />
-      </div>
-    </OwlCarousel>
+      </SwiperSlide>
+      <SwiperSlide>Slide 3</SwiperSlide>
+      <SwiperSlide>Slide 4</SwiperSlide>
+    </Swiper>
   );
 };
 export default MyOwlCarousel;
