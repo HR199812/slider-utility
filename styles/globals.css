@@ -68,22 +68,69 @@ a {
   cursor: ew-resize;
 }
 .item-child-container {
-  /* transform: rot ate(90deg) translate(25px); */
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
 }
-.item-child-container .item-subchild {
-  float: left;
-  /* width: 100%; */
+.swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
+  background-repeat: no-repeat;
+  background-size: 40% auto;
+  background-position: center;
 }
 
-.swiper-pagination-bullet{
+.swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
+  background-repeat: no-repeat;
+  background-size: 40% auto;
+  background-position: center;
+}
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+
+.item-child-container .item-subchild {
+  position: absolute;
+  padding: 1rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  background-color: rgba(132, 132, 132, 0.3);
+}
+
+.item-child-container:hover > .item-subchild {
+  opacity: 1;
+  transition: 0.2s ease-in;
+}
+
+/* :hover{
+  
+} */
+.blog-description {
+  position: absolute;
+  bottom: -80px;
+  background: rgba(240, 238, 236, 0.2);
+  width: 100%;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out,
+    -moz-transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
   background: rgb(241, 15, 15) !important;
   width: 1rem;
   height: 1rem;
   border-radius: 0.5rem;
   opacity: 1;
 }
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background: rgb(0, 0, 0) !important;
   width: 1rem;
   height: 1rem;
@@ -91,8 +138,8 @@ a {
   opacity: 1;
 }
 .swiper {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .swiper-slide {

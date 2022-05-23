@@ -2,7 +2,14 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { Pagination, A11y, Autoplay, Mousewheel, Parallax } from "swiper";
+import {
+  Pagination,
+  A11y,
+  Autoplay,
+  Mousewheel,
+  Parallax,
+  Navigation,
+} from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
@@ -11,14 +18,23 @@ import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import "swiper/css/mousewheel";
 import "swiper/css/parallax";
+import "swiper/css/navigation";
 
 export default function slider() {
+
+  function showSubchildText(){
+
+  }
+  function hideSubchildText(){
+
+  }
   return (
     <>
       <Swiper
-        modules={[Pagination, A11y, Autoplay, Mousewheel, Parallax]}
-        spaceBetween={0}
-        slidesPerView={1}
+        modules={[Pagination, A11y, Autoplay, Mousewheel, Parallax, Navigation]}
+        navigation={true}
+        spaceBetween={10}
+        slidesPerView={3}
         autoplay={{ delay: 3000 }}
         mousewheel={{ invert: true }}
         pagination={{
@@ -32,36 +48,27 @@ export default function slider() {
         parallax={true}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
-        style={{ transform: `rotate(-90deg)` }}
       >
         <SwiperSlide>
-          <div className="item-child-container">
-            <div className="item-subchild">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
-            </div>
-            <div className="item-subchild">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jp" />
-            </div>
+          <div
+            className="item-child-container"
+            onMouseEnter={showSubchildText}
+            onMouseLeave={hideSubchildText}
+          >
+            <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+            <div className="item-subchild">Hi</div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="item-child-container">
-            <div className="item-subchild">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jp" />
-            </div>
-            <div className="item-subchild">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
-            </div>
+            <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+            <div className="item-subchild">Hi</div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="item-child-container">
-            <div className="item-subchild">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
-            </div>
-            <div className="item-subchild">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jp" />
-            </div>
+            <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+            <div className="item-subchild">Hi</div>
           </div>
         </SwiperSlide>
       </Swiper>
