@@ -3,7 +3,7 @@ import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useRef, useState } from "react";
 
 const HorizontalSlider = () => {
-  const [left, setLeft] = useState();
+  const left = useRef();
 
   const elementSize = useRef();
 
@@ -19,6 +19,7 @@ const HorizontalSlider = () => {
 
   useEffect(() => {
     // setLeft(elementSize.current.getBoundingClientRect().right - 900);
+    left.current.style.left = `-2% !important`;
   }, [left]);
 
   return (
@@ -33,6 +34,7 @@ const HorizontalSlider = () => {
               touchAction: "pan-x",
             }}
             className="container-two"
+            ref={left}
           >
             {/* <img
               className="image"
