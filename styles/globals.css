@@ -172,6 +172,133 @@ img {
   pointer-events: none;
   user-select: none;
 }
+
+.account-settings-container h1{
+  margin: 1rem;
+}
+.account-settings-container {
+  width: 100%;
+  height: 100%;
+  margin: 2rem;
+}
+.account-info {
+  margin: 1rem;
+}
+.account-info input {
+  padding: 1rem;
+  width: 45%;
+  border-radius: 0px;
+  border-color: rgb(118, 118, 118);
+  border-width: 0.5px;
+}
+.account-info input:first-child {
+  margin-right: 1rem;
+}
+.account-save-settings {
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  width: 35%;
+  border-radius: 5px;
+  border: 0px;
+}
+.your-orders-container {
+  width: 100%;
+  height: 100%;
+  margin: 2rem;
+}
+.your-order-image {
+  width: 350px;
+  height: 350px;
+  margin-right: 2rem;
+  background-color: red;
+}
+.you-order-see-more {
+  margin-left: 10rem;
+}
+.your-order-row,
+.your-order-info {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+@media screen and (max-width: 920px) {
+  .your-order-image {
+    width: 250px;
+    height: 250px;
+    margin-right: 2rem;
+    background-color: red;
+  }
+  .you-order-see-more {
+    margin-left: 6rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .your-order-row {
+    display: block;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+  .your-order-info {
+    display: flex;
+    justify-content: center;
+  }
+  .you-order-see-more {
+    margin-left: 4rem;
+  }
+  .your-order-image {
+    width: 90%;
+    height: 350px;
+    margin-right: 2rem;
+    background-color: red;
+  }
+  .account-info {
+    margin: 0px;
+  }
+  .account-info input {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 0px;
+    border-color: rgb(118, 118, 118);
+    border-width: 0.5px;
+    margin: 6px;
+  }
+  .account-save-settings {
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    width: 45%;
+    border-radius: 5px;
+    border: 0px;
+    margin-left: 5px;
+    margin-top: 1rem;
+  }
+  .account-settings-container {
+    width: 100%;
+    height: 100%;
+    margin: 1rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .your-order-row {
+    display: block;
+    /* align-items: center; */
+    /* justify-content: center; */
+  }
+  .your-order-info {
+    display: flex;
+    justify-content: center;
+  }
+  .you-order-see-more {
+    margin-left: 4rem;
+  }
+  .your-order-image {
+    width: 90%;
+    height: 250px;
+    margin-right: 2rem;
+    background-color: red;
+  }
+}
 @media screen and (max-width: 767px) {
   .app-handle-container {
     width: 10px;
