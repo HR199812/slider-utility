@@ -6,7 +6,7 @@ export default function restrictpincode() {
   const [init, setInit] = useState(initialState);
   function GetStateCity() {
     console.log(pincode);
-    if (pincode.toString().length === 5) {
+    if (pincode.toString().length === 5 && pincode >= 0 && pincode <= 99950) {
       alert("Hi");
     } else {
       alert("Pincode Length should be 5");
