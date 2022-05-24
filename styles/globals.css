@@ -172,6 +172,19 @@ img {
   pointer-events: none;
   user-select: none;
 }
+.address-form {
+  margin: 2rem;
+  width: fit-content;
+}
+.address-form input {
+  padding: 1rem;
+  margin: 2rem;
+  width: 30%;
+}
+.address-form button {
+  padding: 0.5rem;
+  margin: 2rem;
+}
 .order-details-container {
   margin: 2rem;
 }
