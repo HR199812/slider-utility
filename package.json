@@ -18,7 +18,8 @@
     "react-dom": "18.1.0",
     "react-owl-carousel": "^2.3.3",
     "react-spring": "^9.4.5",
-    "swiper": "^8.1.5"
+    "swiper": "^8.1.5",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "eslint": "8.15.0",
