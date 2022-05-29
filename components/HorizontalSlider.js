@@ -24,7 +24,7 @@ const HorizontalSlider = () => {
       posHandle.x.set(params.offset[0]);
     },
     {
-      bounds: { top: 0, right: 0, bottom: 0 },
+      bounds: { top: 0, bottom: 0, right: 0 },
     }
   );
 
