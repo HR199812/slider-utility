@@ -3,10 +3,12 @@ import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useRef, useState } from "react";
 
 const HorizontalSlider = () => {
+  const BOTTOM_POINT = 0;
   const left = useRef();
 
   const elementSize = useRef();
 
+  const posHandle = useSpring({ x: 0 });
   let [{ x, y }, api] = useSpring(() => ({ x: 0, y: 0 }));
 
   const bind = useDrag(
@@ -17,7 +19,17 @@ const HorizontalSlider = () => {
     }
   );
 
+  const bindHandle = useDrag(
+    (params) => {
+      posHandle.x.set(params.offset[0]);
+    },
+    {
+      bounds: { top: 0, right: 0, bottom: 0 },
+    }
+  );
+
   useEffect(() => {
+    BOTTOM_POINT = window.innerHeight - 30;
     // setLeft(elementSize.current.getBoundingClientRect().right - 900);
     left.current.style.left = `-2% !important`;
   }, [left]);
@@ -27,32 +39,23 @@ const HorizontalSlider = () => {
       <div>
         <div className="container-one">
           <animated.div
-            {...bind()}
+            {...bindHandle()}
             style={{
-              x,
-              y,
-              touchAction: "pan-x",
+              x: posHandle.x,
+              touchAction: "none",
+            }}
+            className="app-handle-container"
+          >
+            <div className="app-handle" />
+          </animated.div>
+          <animated.div
+            style={{
+              x: posHandle.x,
             }}
             className="container-two"
             ref={left}
-          >
-            {/* <img
-              className="image"
-              src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jpg"
-            ></img> */}
-            <div className="app-handle-container">
-              <div className="app-handle" />
-            </div>
-          </animated.div>
+          ></animated.div>
         </div>
-        {/* <div className="container-two">
-          <div ref={elementSize} className="container-two-image">
-            <img
-              className="image"
-              src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg"
-            ></img>
-          </div>
-        </div> */}
       </div>
     </>
   );
