@@ -86,10 +86,10 @@ export default function mobileslider() {
         </SwiperSlide>
       </Swiper>
       <div className="mob-slider-text-title">
-        <p class="artwork_mobile_slider-title" style={{ color: "#ffffff" }}>
+        <p className="artwork_mobile_slider-title" style={{ color: "#ffffff" }}>
           <a href="#">
             COLLABORATIONS WITH ARTISTS
-            <span class="artwork-title-second">DISCOVER THE ARTISTS</span>
+            <span className="artwork-title-second">DISCOVER THE ARTISTS</span>
           </a>
         </p>
       </div>
