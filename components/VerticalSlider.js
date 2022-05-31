@@ -6,52 +6,53 @@ import { useEffect, useRef, useState } from "react";
 const VerticalSlider = () => {
   const [bottom, setBottom] = useState();
 
+  const posHandle = useSpring({ y: 0 });
+
   const elementSize = useRef();
 
-  let [{ x, y }, api] = useSpring(() => ({ x: 0, y: 50 }));
+  // let [{ x, y }, api] = useSpring(() => ({ x: 0, y: 50 }));
 
-  const bind = useDrag(
-    ({ down, offset: [x, y] }) => api.start({ x, y, immediate: down }),
+  // const bind = useDrag(
+  //   ({ down, offset: [x, y] }) => api.start({ x, y, immediate: down }),
+  //   {
+  //     bounds: { right: 0, top: 0, left: 0, bottom: bottom },
+  //   }
+  // );
+
+  const bindHandle = useDrag(
+    (params) => {
+      posHandle.y.set(params.xy[1]);
+    },
     {
-      bounds: { right: 0, top: 0, left: 0, bottom: bottom },
+      bounds: { top: 0, bottom: 0, right: 0 },
     }
   );
 
   useEffect(() => {
-    setBottom(elementSize.current.getBoundingClientRect().bottom - 20);
+    // setBottom(elementSize.current.getBoundingClientRect().bottom - 20);
   }, [bottom]);
 
   return (
     <>
       <div>
-        <div className="container-one" ref={elementSize}>
+        <div className="container-one">
           <animated.div
-            {...bind()}
+            {...bindHandle()}
             style={{
-              x,
-              y,
-              touchAction: "pan-x",
+              y: posHandle.y,
+              touchAction: "none",
+            }}
+            className="app-handle-container"
+          >
+            <div className="app-handle-vertical" />
+          </animated.div>
+          <animated.div
+            style={{
+              y: posHandle.y,
             }}
             className="container-two"
-          >
-            <img
-              className="image"
-              src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jpg"
-            ></img>
-            <div className="app-handle-container">
-              <div className="app-handle" />
-            </div>
-          </animated.div>
+          ></animated.div>
         </div>
-
-        {/* <div className="container-two">
-          <div ref={elementSize} className="container-two-image">
-            <img
-              className="image"
-              src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg"
-            ></img>
-          </div>
-        </div> */}
       </div>
     </>
   );

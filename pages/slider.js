@@ -63,19 +63,19 @@ export default function slider() {
         >
           <SwiperSlide>
             <div className="item-child-container">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
               <div className="item-subchild">Hi</div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item-child-container">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
               <div className="item-subchild">Hi</div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item-child-container">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
               <div className="item-subchild">Hi</div>
             </div>
           </SwiperSlide>

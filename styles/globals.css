@@ -36,14 +36,14 @@ a {
   overflow-x: hidden;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg);
+  background-image: url(../src/croc_on_croc_wallet/Desktop-artwork.jpeg);
 }
 .container-two {
   min-height: 100%;
   min-width: 100%;
   position: absolute;
   left: -2%;
-  background-image: url(https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jpg);
+  background-image: url(../src/croc_on_croc_wallet/artist1.jpeg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -60,6 +60,18 @@ a {
   /* width: 100px;
   height: 10px; */
   background-image: url(https://exhibitacollection.com/img/STORE/slide-button.png);
+  margin: 0 auto;
+  border-radius: 25px;
+  width: 55px;
+  height: 35px;
+  background-repeat: no-repeat;
+  cursor: ew-resize;
+}
+.app-handle {
+  float: right;
+  /* width: 100px;
+  height: 10px; */
+  background-image: url(../src/move.png);
   margin: 0 auto;
   border-radius: 25px;
   width: 55px;
@@ -118,14 +130,14 @@ a {
 /* .nav-icon {
   position: relative;
 } */
-.item-child-container .item-subchild {
+.item-subchild {
   position: absolute;
   padding: 1rem;
   bottom: 0;
   left: 0;
   right: 0;
   text-align: center;
-  /* opacity: 0; */
+  opacity: 0;
   background-color: rgba(132, 132, 132, 0.3);
 }
 
@@ -134,9 +146,6 @@ a {
   transition: 0.2s ease-in;
 }
 
-/* :hover{
-  
-} */
 .blog-description {
   position: absolute;
   bottom: -80px;
@@ -454,10 +463,23 @@ img {
     z-index: 4;
   }
   .app-handle {
-    transform: rotate(90deg);
+    /* transform: rotate(90deg); */
+    margin-top: -1rem;
     width: 30px;
-    height: 25px;
+    height: 46px;
     background-size: 30px;
+  }
+  .app-handle-vertical {
+    float: right;
+    /* width: 100px;
+    height: 10px; */
+    background-image: url(../src/move-top.png);
+    margin: 0 auto;
+    border-radius: 25px;
+    width: 55px;
+    height: 35px;
+    background-repeat: no-repeat;
+    cursor: ew-resize;
   }
   .container-one {
     margin: 1rem;
@@ -465,18 +487,18 @@ img {
     min-width: 90%;
     position: absolute;
     z-index: -2;
-    overflow-x: hidden;
+    overflow-y: hidden;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg);
+    background-image: url(../src/croc_on_croc_wallet/Desktop-artwork.jpeg);
   }
   .container-two {
     min-height: 50%;
-    min-width: 50%;
+    min-width: 100%;
     position: absolute;
     top: 2%;
     left: 0;
-    background-image: url(https://api.exhibitacollection.com/wp-content/uploads/2021/12/Desktop-artwork.jpg);
+    background-image: url(../src/croc_on_croc_wallet/artist1.jpeg);
     background-size: contain;
     background-repeat: no-repeat;
   }
