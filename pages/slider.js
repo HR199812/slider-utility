@@ -90,8 +90,7 @@ export default function slider() {
             Parallax,
             Navigation,
           ]}
-          navigation={true}
-          spaceBetween={10}
+          direction={"vertical"}
           slidesPerView={3}
           autoplay={{ delay: 3000 }}
           mousewheel={{ invert: true }}
@@ -104,24 +103,24 @@ export default function slider() {
           watchSlidesProgress={true}
           speed={1000}
           parallax={true}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+        style={{ height: "70vh", width: "100vw", objectFit: "cover" }}
+
         >
           <SwiperSlide>
             <div className="item-child-container">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
               <div className="item-subchild">Hi</div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item-child-container">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
               <div className="item-subchild">Hi</div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="item-child-container">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
               <div className="item-subchild">Hi</div>
             </div>
           </SwiperSlide>
