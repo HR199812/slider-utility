@@ -57,30 +57,30 @@ export default function mobileslider() {
         <SwiperSlide>
           <div>
             <div className="item-subchild-one">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
             </div>
             <div className="item-subchild-two">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div>
             <div className="item-subchild-one">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
             </div>
             <div className="item-subchild-two">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div>
             <div className="item-subchild-one">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
             </div>
             <div className="item-subchild-two">
-              <img src="https://api.exhibitacollection.com/wp-content/uploads/2021/12/croc-on-crc-wallet-product-D.jpg" />
+              <img src="../src/croc_on_croc_wallet/Desktop-artwork.jpeg" />
             </div>
           </div>
         </SwiperSlide>
